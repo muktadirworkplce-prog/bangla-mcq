@@ -51,9 +51,8 @@
         /* Header */
         header {
             background-color: var(--light-card);
-            padding: 15px 0;
-            box-shadow: var(--shadow);
-            position: sticky;
+            padding: 10px 0;
+            position: relative;
             top: 0;
             z-index: 1000;
             transition: var(--transition);
