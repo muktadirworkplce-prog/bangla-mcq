@@ -1,413 +1,113 @@
 <!DOCTYPE html>
-<html lang="bn" class="scroll-smooth">
+<html lang="bn">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বিশ্ববিদ্যালয় পরীক্ষা অনুশীলন</title>
+    <title>বাংলা অধ্যায়সমূহ | Bengali Chapters</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        'hind': ['Hind Siliguri', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                        },
-                        dark: {
-                            bg: '#1a1a2e',
-                            card: '#16213e',
-                            text: '#e6e6e6',
-                            border: '#2d4059'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * {
-            font-family: 'Hind Siliguri', sans-serif;
-        }
         body {
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .chapter-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .chapter-card:hover {
-            transform: translateY(-5px);
-        }
-        .dropdown-option {
-            transition: background-color 0.2s;
-        }
-        .dropdown-option:hover {
-            background-color: rgba(59, 130, 246, 0.1);
-        }
-        .dark .dropdown-option:hover {
-            background-color: rgba(59, 130, 246, 0.3);
+            font-family: 'Noto Sans Bengali', sans-serif;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-dark-bg dark:text-dark-text">
-    <!-- Header/Navigation -->
-    <header class="sticky top-0 z-50 shadow-md bg-white dark:bg-dark-card">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
-                    <i class="fas fa-graduation-cap text-white text-xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-xl font-bold">পরীক্ষা অনুশীলন</h1>
-                    <p class="text-xs text-gray-500 dark:text-gray-400">বিশ্ববিদ্যালয় পরীক্ষার প্রস্তুতি</p>
-                </div>
+<body class="bg-white text-gray-900 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header -->
+        <header class="mb-12 pt-6 border-b border-gray-300 pb-6">
+            <h1 class="text-3xl md:text-4xl font-bold text-center mb-4">বাংলা অধ্যায়সমূহ</h1>
+            <p class="text-gray-700 text-center text-lg">বাংলা সাহিত্যের নির্বাচিত রচনাসমগ্র</p>
+        </header>
+        
+        <!-- Chapter List -->
+        <main class="mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Chapter items will be dynamically inserted here -->
             </div>
-            
-            <div class="flex items-center space-x-4">
-                <!-- Dark/Light Mode Toggle -->
-                <button id="themeToggle" class="p-2 rounded-full bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700">
-                    <i id="sunIcon" class="fas fa-sun text-yellow-500 hidden"></i>
-                    <i id="moonIcon" class="fas fa-moon text-gray-700 dark:text-gray-300"></i>
-                </button>
-                
-                <!-- User Profile -->
-                <div class="hidden md:flex items-center space-x-2">
-                    <div class="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
-                        <span class="text-white font-medium">ছ</span>
-                    </div>
-                    <span class="font-medium">ছাত্র</span>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Hero Section -->
-        <section class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">বাংলা সাহিত্য পরীক্ষার প্রস্তুতি</h2>
-            <p class="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-6">
-                নির্বাচিত অধ্যায় থেকে প্রশ্নের ধরন বেছে নিন এবং আপনার পরীক্ষার প্রস্তুতি সম্পূর্ণ করুন। প্রতিটি অধ্যায়ের জন্য রয়েছে বিশেষায়িত অনুশীলন প্রশ্ন।
-            </p>
-            <div class="inline-flex items-center bg-blue-50 dark:bg-blue-900/30 px-4 py-2 rounded-full">
-                <i class="fas fa-info-circle text-primary-600 dark:text-primary-400 mr-2"></i>
-                <p class="text-sm">মোট ২৪টি অধ্যায় | ৫০০+ অনুশীলন প্রশ্ন</p>
-            </div>
-        </section>
-
-        <!-- Selection Section -->
-        <section class="mb-12">
-            <div class="bg-white dark:bg-dark-card rounded-xl shadow-lg p-6 max-w-4xl mx-auto">
-                <h3 class="text-2xl font-bold mb-6 text-center flex items-center justify-center">
-                    <i class="fas fa-book-open text-primary-600 mr-3"></i>
-                    অধ্যায় নির্বাচন করুন
-                </h3>
-                
-                <div class="mb-8">
-                    <label class="block text-lg font-medium mb-3">প্রশ্নের ধরন:</label>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div class="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-4 text-center hover:border-primary-500 transition-colors cursor-pointer">
-                            <i class="fas fa-question-circle text-3xl text-primary-600 mb-2"></i>
-                            <h4 class="font-bold">বহুনির্বাচনী প্রশ্ন</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">MCQ প্রশ্নের অনুশীলন</p>
-                        </div>
-                        <div class="border-2 border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-4 text-center hover:border-primary-500 transition-colors cursor-pointer">
-                            <i class="fas fa-edit text-3xl text-primary-600 mb-2"></i>
-                            <h4 class="font-bold">রচনামূলক প্রশ্ন</h4>
-                            <p class="text-sm text-gray-600 dark:text-gray-400">বিস্তারিত উত্তর লিখুন</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Chapter Dropdown -->
-                <div class="relative mb-8">
-                    <label class="block text-lg font-medium mb-3">অধ্যায়:</label>
-                    <div class="relative">
-                        <select id="chapterSelect" class="w-full p-4 pr-12 border-2 border-gray-300 dark:border-gray-700 dark:bg-dark-card rounded-lg appearance-none focus:outline-none focus:border-primary-500 text-lg cursor-pointer">
-                            <option value="" disabled selected>একটি অধ্যায় নির্বাচন করুন</option>
-                            <!-- Options will be populated by JavaScript -->
-                        </select>
-                        <div class="absolute right-4 top-1/2 transform -translate-y-1/2 pointer-events-none">
-                            <i class="fas fa-chevron-down text-gray-500"></i>
-                        </div>
-                    </div>
-                    <p id="selectedChapterInfo" class="mt-3 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg hidden">
-                        <span id="selectedChapterName" class="font-bold"></span> - <span id="selectedChapterAuthor" class="italic"></span>
-                    </p>
-                </div>
-                
-                <!-- Start Practice Button -->
-                <div class="text-center">
-                    <button id="startPracticeBtn" class="bg-primary-600 hover:bg-primary-700 text-white font-bold py-4 px-10 rounded-lg text-lg shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 disabled:hover:shadow-lg" disabled>
-                        <i class="fas fa-play-circle mr-2"></i>
-                        অনুশীলন শুরু করুন
-                    </button>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mt-3">অধ্যায় নির্বাচন করে বোতামটি সক্রিয় হবে</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- All Chapters Grid -->
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h3 class="text-2xl font-bold">সকল অধ্যায়</h3>
-                <div class="text-sm text-gray-600 dark:text-gray-400">
-                    <i class="fas fa-filter mr-1"></i>
-                    <span id="chapterCount">24</span>টি অধ্যায়
-                </div>
-            </div>
-            
-            <div id="chaptersGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Chapter cards will be populated by JavaScript -->
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="bg-gradient-to-r from-primary-500 to-blue-600 rounded-xl shadow-lg p-8 text-white mb-12">
-            <h3 class="text-2xl font-bold mb-8 text-center">আপনার অগ্রগতি</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="text-center">
-                    <div class="text-4xl font-bold mb-2">0</div>
-                    <div class="text-blue-100">সম্পূর্ণ অধ্যায়</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold mb-2">0</div>
-                    <div class="text-blue-100">উত্তরিত প্রশ্ন</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold mb-2">0%</div>
-                    <div class="text-blue-100">সাফল্যের হার</div>
-                </div>
-                <div class="text-center">
-                    <div class="text-4xl font-bold mb-2">24</div>
-                    <div class="text-blue-100">মোট অধ্যায়</div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-8">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-6 md:mb-0">
-                    <div class="flex items-center space-x-2 mb-3">
-                        <div class="w-10 h-10 bg-primary-600 rounded-full flex items-center justify-center">
-                            <i class="fas fa-graduation-cap text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-white">পরীক্ষা অনুশীলন</h3>
-                    </div>
-                    <p class="max-w-md">বাংলা সাহিত্যের বিশ্ববিদ্যালয় পরীক্ষার জন্য প্রস্তুতিমূলক প্রশ্নের সংগ্রহ</p>
-                </div>
-                
-                <div class="text-center">
-                    <p class="mb-3">অন্যান্য বিষয়</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="hover:text-white transition-colors">ইংরেজি</a>
-                        <a href="#" class="hover:text-white transition-colors">ইতিহাস</a>
-                        <a href="#" class="hover:text-white transition-colors">দর্শন</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-sm">
-                <p>© ২০২৩ পরীক্ষা অনুশীলন | সকল অধিকার সংরক্ষিত</p>
-                <p class="mt-1">ডেভেলপ করেছেন: বাংলা সাহিত্য অনুরাগী</p>
-            </div>
-        </div>
-    </footer>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="mt-12 pt-8 border-t border-gray-300 text-center text-gray-600">
+            <p class="mb-2">একটি সরল ও মিনিমালিস্ট ওয়েবসাইট</p>
+            <p class="text-sm">© ২০২৩ বাংলা সাহিত্য সংগ্রহ</p>
+        </footer>
+    </div>
 
     <script>
-        // Chapters data
+        // Chapter data with Bengali titles and English URLs
         const chapters = [
-            { id: 1, name: "বাঙ্গালার নব্য লেখকদের প্রতি নিবেদন", author: "বঙ্কিমচন্দ্র চট্টোপাধ্যায়", link: "bangalar-nobyo-lekhokder-proti-nibedon" },
-            { id: 2, name: "অপরিচিতা", author: "রবীন্দ্রনাথ ঠাকুর", link: "oporichita" },
-            { id: 3, name: "সাহিত্য খেলা", author: "প্রমথ চৌধুরী", link: "shahitto-khela" },
-            { id: 4, name: "বিলাসী", author: "শরৎচন্দ্র চট্টোপাধ্যায়", link: "bilashi" },
-            { id: 5, name: "অর্ধাঙ্গী", author: "রোকেয়া সাখাওয়াত হোসেন", link: "ordhangi" },
-            { id: 6, name: "যৌবনের গান", author: "কাজী নজরুল ইসলাম", link: "jouboner-gaan" },
-            { id: 7, name: "জীবন ও বৃক্ষ", author: "মোতাহের হোসেন চৌধুরী", link: "jibon-o-brikhkho" },
-            { id: 8, name: "গন্তব্য কাবুল", author: "সৈয়দ মুজতবা আলী", link: "gontobbo-kabul" },
-            { id: 9, name: "মাসি-পিসি", author: "মানিক বন্দ্যোপাধ্যায়", link: "masi-pisi" },
-            { id: 10, name: "কপিলদাস মুর্মুর শেষ কাজ", author: "শওকত আলী", link: "kopildas-murmur-shesh-kaaj" },
-            { id: 11, name: "রেনকোট", author: "আখতারুজ্জামান ইলিয়াস", link: "raincoat" },
-            { id: 12, name: "নেকলেস", author: "গিয় দ্য মোপাসাঁ", link: "necklace" },
-            { id: 13, name: "খন্ড-বর্নন", author: "আলাওল", link: "khondo-bornon" },
-            { id: 14, name: "বিভীষণের প্রতি মেঘনাদ", author: "মাইকেল মধুসূদন দত্ত", link: "bibishoner-proti-meghnad" },
-            { id: 15, name: "সোনার তরী", author: "রবীন্দ্রনাথ ঠাকুর", link: "sonar-tori" },
-            { id: 16, name: "বিদ্রোহী", author: "কাজী নজরুল ইসলাম", link: "bidrohi" },
-            { id: 17, name: "সুচেতনা", author: "জীবনানন্দ দাশ", link: "shuchetona" },
-            { id: 18, name: "প্রতিদান", author: "জসীমউদ্দীন", link: "protidaan" },
-            { id: 19, name: "তাঁহারে (তাহারে) পরে মনে", author: "সুফিয়া কামাল", link: "tanhare-pore-mone" },
-            { id: 20, name: "পদ্মা", author: "ফররুখ আহমদ", link: "padma" },
-            { id: 21, name: "ফেব্রুয়ারি ১৯৫২", author: "শামসুর রাহমান", link: "february-1952" },
-            { id: 22, name: "আঠারো বছর বয়স", author: "সুকান্ত ভট্টাচার্য", link: "atharo-bochor-boyosh" },
-            { id: 23, name: "আমি কিংবদন্তির কথা বলছি", author: "আবু জাফর ওবায়দুল্লাহ", link: "ami-kingbodontir-kotha-bolchi" },
-            { id: 24, name: "প্রত্যাবর্তনের লজ্জা", author: "আল মাহমুদ", link: "prottabortoner-lojja" }
+            { id: 1, title: "বাঙ্গালার নব্য লেখকদের প্রতি নিবেদন", link: "Bangalar-Nobyo-Lekhokder-Proti-Nibedon" },
+            { id: 2, title: "অপরিচিতা", link: "Oporichita" },
+            { id: 3, title: "সাহিত্য খেলা", link: "Shahitto-Khela" },
+            { id: 4, title: "বিলাসী", link: "Bilashi" },
+            { id: 5, title: "অর্ধাঙ্গী", link: "Ordhangi" },
+            { id: 6, title: "যৌবনের গান", link: "Jouboner-Gaan" },
+            { id: 7, title: "জীবন ও বৃক্ষ", link: "Jibon-O-Brikhkho" },
+            { id: 8, title: "গন্তব্য কাবুল", link: "Gontobbo-Kabul" },
+            { id: 9, title: "মাসি-পিসি", link: "Masi-Pisi" },
+            { id: 10, title: "কপিলদাস মুর্মুর শেষ কাজ", link: "Kopildas-Murmur-Shesh-Kaaj" },
+            { id: 11, title: "রেনকোট", link: "Raincoat" },
+            { id: 12, title: "নেকলেস", link: "Necklace" },
+            { id: 13, title: "খন্ড-বর্নন", link: "Khondo-Bornon" },
+            { id: 14, title: "বিভীষণের প্রতি মেঘনাদ", link: "Bibishoner-Proti-Meghnad" },
+            { id: 15, title: "সোনার তরী", link: "Sonar-Tori" },
+            { id: 16, title: "বিদ্রোহী", link: "Bidrohi" },
+            { id: 17, title: "সুচেতনা", link: "Shuchetona" },
+            { id: 18, title: "প্রতিদান", link: "Protidaan" },
+            { id: 19, title: "তাঁহারে (তাহারে) পরে মনে", link: "Tanhare-Pore-Mone" },
+            { id: 20, title: "পদ্মা", link: "Padma" },
+            { id: 21, title: "ফেব্রুয়ারি ১৯৫২", link: "February-1952" },
+            { id: 22, title: "আঠারো বছর বয়স", link: "Atharo-Bochor-Boyosh" },
+            { id: 23, title: "আমি কিংবদন্তির কথা বলছি", link: "Ami-Kingbodontir-Kotha-Bolchi" },
+            { id: 24, title: "প্রত্যাবর্তনের লজ্জা", link: "Prottabortoner-Lojja" }
         ];
 
-        // DOM Elements
-        const themeToggle = document.getElementById('themeToggle');
-        const sunIcon = document.getElementById('sunIcon');
-        const moonIcon = document.getElementById('moonIcon');
-        const chapterSelect = document.getElementById('chapterSelect');
-        const selectedChapterInfo = document.getElementById('selectedChapterInfo');
-        const selectedChapterName = document.getElementById('selectedChapterName');
-        const selectedChapterAuthor = document.getElementById('selectedChapterAuthor');
-        const startPracticeBtn = document.getElementById('startPracticeBtn');
-        const chaptersGrid = document.getElementById('chaptersGrid');
-        const chapterCount = document.getElementById('chapterCount');
-
-        // Initialize theme
-        function initTheme() {
-            const savedTheme = localStorage.getItem('theme') || 'light';
-            if (savedTheme === 'dark') {
-                document.documentElement.classList.add('dark');
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            } else {
-                document.documentElement.classList.remove('dark');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            }
-        }
-
-        // Toggle theme
-        themeToggle.addEventListener('click', () => {
-            if (document.documentElement.classList.contains('dark')) {
-                document.documentElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            } else {
-                document.documentElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            }
-        });
-
-        // Populate dropdown with chapters
-        function populateDropdown() {
-            chapters.forEach(chapter => {
-                const option = document.createElement('option');
-                option.value = chapter.id;
-                option.textContent = `${chapter.id}. ${chapter.name} ⇒ ${chapter.author}`;
-                chapterSelect.appendChild(option);
-            });
-        }
-
-        // Populate chapters grid
-        function populateChaptersGrid() {
-            chaptersGrid.innerHTML = '';
-            
-            chapters.forEach(chapter => {
-                const card = document.createElement('div');
-                card.className = 'chapter-card bg-white dark:bg-dark-card rounded-xl shadow-md p-5 border border-gray-200 dark:border-dark-border hover:shadow-lg';
-                card.innerHTML = `
-                    <div class="flex justify-between items-start mb-3">
-                        <span class="bg-primary-100 dark:bg-primary-900/40 text-primary-800 dark:text-primary-300 text-sm font-bold px-3 py-1 rounded-full">অধ্যায় ${chapter.id}</span>
-                        <i class="fas fa-book-open text-gray-400"></i>
+        // Function to create chapter element
+        function createChapterElement(chapter) {
+            const chapterElement = document.createElement('div');
+            chapterElement.className = 'chapter-item p-5 border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200';
+            chapterElement.innerHTML = `
+                <div class="flex items-start">
+                    <span class="text-gray-500 mr-4 text-lg">${chapter.id}.</span>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">${chapter.title}</h3>
+                        <a href="#${chapter.link}" class="text-gray-700 hover:text-black inline-flex items-center mt-1 text-sm">
+                            <span>পড়ুন</span>
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
                     </div>
-                    <h4 class="font-bold text-lg mb-2 line-clamp-2">${chapter.name}</h4>
-                    <p class="text-gray-600 dark:text-gray-400 text-sm mb-4">${chapter.author}</p>
-                    <button class="select-chapter-btn w-full bg-gray-100 dark:bg-gray-800 hover:bg-primary-100 dark:hover:bg-primary-900/40 text-primary-700 dark:text-primary-300 font-medium py-2 rounded-lg transition-colors" data-id="${chapter.id}">
-                        নির্বাচন করুন
-                    </button>
-                `;
-                chaptersGrid.appendChild(card);
+                </div>
+            `;
+            
+            // Add click event to simulate navigation
+            chapterElement.querySelector('a').addEventListener('click', function(e) {
+                e.preventDefault();
+                alert(`"${chapter.title}" লিংকে নেভিগেট করা হবে\n(URL: /${chapter.link})`);
+                // In a real implementation, you would navigate to the actual page:
+                // window.location.href = `/${chapter.link}`;
             });
             
-            // Add event listeners to chapter selection buttons
-            document.querySelectorAll('.select-chapter-btn').forEach(btn => {
-                btn.addEventListener('click', function() {
-                    const chapterId = parseInt(this.getAttribute('data-id'));
-                    const chapter = chapters.find(c => c.id === chapterId);
-                    
-                    if (chapter) {
-                        // Update dropdown selection
-                        chapterSelect.value = chapterId;
-                        
-                        // Update selected chapter info
-                        selectedChapterName.textContent = chapter.name;
-                        selectedChapterAuthor.textContent = chapter.author;
-                        selectedChapterInfo.classList.remove('hidden');
-                        
-                        // Enable start practice button
-                        startPracticeBtn.disabled = false;
-                        
-                        // Scroll to selection section
-                        document.querySelector('#chapterSelect').scrollIntoView({ 
-                            behavior: 'smooth',
-                            block: 'center'
-                        });
-                    }
-                });
-            });
+            return chapterElement;
         }
 
-        // Handle chapter selection from dropdown
-        chapterSelect.addEventListener('change', function() {
-            const selectedId = parseInt(this.value);
-            const chapter = chapters.find(c => c.id === selectedId);
+        // Render chapters when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const container = document.querySelector('.grid');
             
-            if (chapter) {
-                // Update selected chapter info
-                selectedChapterName.textContent = chapter.name;
-                selectedChapterAuthor.textContent = chapter.author;
-                selectedChapterInfo.classList.remove('hidden');
-                
-                // Enable start practice button
-                startPracticeBtn.disabled = false;
-            } else {
-                selectedChapterInfo.classList.add('hidden');
-                startPracticeBtn.disabled = true;
-            }
-        });
-
-        // Handle start practice button click
-        startPracticeBtn.addEventListener('click', function() {
-            const selectedId = parseInt(chapterSelect.value);
-            const chapter = chapters.find(c => c.id === selectedId);
+            chapters.forEach(chapter => {
+                const chapterElement = createChapterElement(chapter);
+                container.appendChild(chapterElement);
+            });
             
-            if (chapter) {
-                // In a real app, this would navigate to the chapter page
-                // For now, show a message and simulate navigation
-                
-                // Show loading state
-                const originalText = startPracticeBtn.innerHTML;
-                startPracticeBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> লোড হচ্ছে...';
-                startPracticeBtn.disabled = true;
-                
-                // Simulate navigation delay
-                setTimeout(() => {
-                    alert(`"${chapter.name}" অধ্যায়ের অনুশীলন পৃষ্ঠায় যাওয়া হচ্ছে...\n\n(এটি একটি ডেমো। আসল অ্যাপ্লিকেশনে, আপনাকে "${chapter.link}" পৃষ্ঠায় নিয়ে যাওয়া হবে।)`);
-                    
-                    // Reset button
-                    startPracticeBtn.innerHTML = originalText;
-                    startPracticeBtn.disabled = false;
-                    
-                    // Here you would actually navigate:
-                    // window.location.href = `/${chapter.link}`;
-                }, 1000);
-            }
-        });
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            initTheme();
-            populateDropdown();
-            populateChaptersGrid();
-            chapterCount.textContent = chapters.length;
+            // Add chapter count display
+            const header = document.querySelector('header');
+            const countElement = document.createElement('p');
+            countElement.className = 'text-gray-600 text-center mt-2';
+            countElement.textContent = `মোট অধ্যায়: ${chapters.length}`;
+            header.appendChild(countElement);
         });
     </script>
 </body>
