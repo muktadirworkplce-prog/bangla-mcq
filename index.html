@@ -3,112 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>বাংলা অধ্যায়সমূহ | Bengali Chapters</title>
+    <title>বাংলা অধ্যায় তালিকা</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Noto Sans Bengali', sans-serif;
-        }
-    </style>
 </head>
-<body class="bg-white text-gray-900 min-h-screen">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
-        <!-- Header -->
-        <header class="mb-12 pt-6 border-b border-gray-300 pb-6">
-            <h1 class="text-3xl md:text-4xl font-bold text-center mb-4">বাংলা অধ্যায়সমূহ</h1>
-            <p class="text-gray-700 text-center text-lg">বাংলা সাহিত্যের নির্বাচিত রচনাসমগ্র</p>
-        </header>
-        
-        <!-- Chapter List -->
-        <main class="mb-16">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- Chapter items will be dynamically inserted here -->
-            </div>
-        </main>
-        
-        <!-- Footer -->
-        <footer class="mt-12 pt-8 border-t border-gray-300 text-center text-gray-600">
-            <p class="mb-2">একটি সরল ও মিনিমালিস্ট ওয়েবসাইট</p>
-            <p class="text-sm">© ২০২৩ বাংলা সাহিত্য সংগ্রহ</p>
-        </footer>
-    </div>
+<body class="bg-white text-black font-sans">
 
-    <script>
-        // Chapter data with Bengali titles and English URLs
-        const chapters = [
-            { id: 1, title: "বাঙ্গালার নব্য লেখকদের প্রতি নিবেদন", link: "Bangalar-Nobyo-Lekhokder-Proti-Nibedon" },
-            { id: 2, title: "অপরিচিতা", link: "Oporichita" },
-            { id: 3, title: "সাহিত্য খেলা", link: "Shahitto-Khela" },
-            { id: 4, title: "বিলাসী", link: "bilashi" },
-            { id: 5, title: "অর্ধাঙ্গী", link: "Ordhangi" },
-            { id: 6, title: "যৌবনের গান", link: "Jouboner-Gaan" },
-            { id: 7, title: "জীবন ও বৃক্ষ", link: "Jibon-O-Brikhkho" },
-            { id: 8, title: "গন্তব্য কাবুল", link: "Gontobbo-Kabul" },
-            { id: 9, title: "মাসি-পিসি", link: "Masi-Pisi" },
-            { id: 10, title: "কপিলদাস মুর্মুর শেষ কাজ", link: "Kopildas-Murmur-Shesh-Kaaj" },
-            { id: 11, title: "রেনকোট", link: "Raincoat" },
-            { id: 12, title: "নেকলেস", link: "Necklace" },
-            { id: 13, title: "খন্ড-বর্নন", link: "Khondo-Bornon" },
-            { id: 14, title: "বিভীষণের প্রতি মেঘনাদ", link: "Bibishoner-Proti-Meghnad" },
-            { id: 15, title: "সোনার তরী", link: "Sonar-Tori" },
-            { id: 16, title: "বিদ্রোহী", link: "Bidrohi" },
-            { id: 17, title: "সুচেতনা", link: "Shuchetona" },
-            { id: 18, title: "প্রতিদান", link: "Protidaan" },
-            { id: 19, title: "তাঁহারে (তাহারে) পরে মনে", link: "Tanhare-Pore-Mone" },
-            { id: 20, title: "পদ্মা", link: "Padma" },
-            { id: 21, title: "ফেব্রুয়ারি ১৯৫২", link: "February-1952" },
-            { id: 22, title: "আঠারো বছর বয়স", link: "Atharo-Bochor-Boyosh" },
-            { id: 23, title: "আমি কিংবদন্তির কথা বলছি", link: "Ami-Kingbodontir-Kotha-Bolchi" },
-            { id: 24, title: "প্রত্যাবর্তনের লজ্জা", link: "Prottabortoner-Lojja" }
-        ];
+    <header class="bg-black text-white p-6 text-center text-2xl font-semibold">
+        বাংলা অধ্যায় তালিকা
+    </header>
 
-        // Function to create chapter element
-        function createChapterElement(chapter) {
-            const chapterElement = document.createElement('div');
-            chapterElement.className = 'chapter-item p-5 border border-gray-300 rounded-lg hover:bg-gray-50 transition duration-200';
-            chapterElement.innerHTML = `
-                <div class="flex items-start">
-                    <span class="text-gray-500 mr-4 text-lg">${chapter.id}.</span>
-                    <div>
-                        <h3 class="text-xl font-semibold mb-2">${chapter.title}</h3>
-                        <a href="#${chapter.link}" class="text-gray-700 hover:text-black inline-flex items-center mt-1 text-sm">
-                            <span>পড়ুন</span>
-                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            `;
-            
-            // Add click event to simulate navigation
-            chapterElement.querySelector('a').addEventListener('click', function(e) {
-                e.preventDefault();
-                alert(`"${chapter.title}" লিংকে নেভিগেট করা হবে\n(URL: /${chapter.link})`);
-                // In a real implementation, you would navigate to the actual page:
-                // window.location.href = `/${chapter.link}`;
-            });
-            
-            return chapterElement;
-        }
+    <main class="max-w-xl mx-auto mt-8 p-4 space-y-2">
+        <ul class="space-y-2">
+            <li><a href="Bangalar Nobyo Lekhokder Proti Nibedon" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১. বাঙ্গালার নব্য লেখকদের প্রতি নিবেদন</a></li>
+            <li><a href="Oporichita" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">২. অপরিচিতা</a></li>
+            <li><a href="Shahitto Khela" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৩. সাহিত্য খেলা</a></li>
+            <li><a href="Bilashi" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৪. বিলাসী</a></li>
+            <li><a href="Ordhangi" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৫. অর্ধাঙ্গী</a></li>
+            <li><a href="Jouboner Gaan" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৬. যৌবনের গান</a></li>
+            <li><a href="Jibon O Brikhkho" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৭. জীবন ও বৃক্ষ</a></li>
+            <li><a href="Gontobbo Kabul" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৮. গন্তব্য কাবুল</a></li>
+            <li><a href="Masi-Pisi" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">৯. মাসি-পিসি</a></li>
+            <li><a href="Kopildas Murmur Shesh Kaaj" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১০. কপিলদাস মুর্মুর শেষ কাজ</a></li>
+            <li><a href="Raincoat" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১১. রেনকোট</a></li>
+            <li><a href="Necklace" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১২. নেকলেস</a></li>
+            <li><a href="Khondo-Bornon" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৩. খন্ড-বর্নন</a></li>
+            <li><a href="Bibishoner Proti Meghnad" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৪. বিভীষণের প্রতি মেঘনাদ</a></li>
+            <li><a href="Sonar Tori" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৫. সোনার তরী</a></li>
+            <li><a href="Bidrohi" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৬. বিদ্রোহী</a></li>
+            <li><a href="Shuchetona" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৭. সুচেতনা</a></li>
+            <li><a href="Protidaan" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৮. প্রতিদান</a></li>
+            <li><a href="Tanhare Pore Mone" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">১৯. তাঁহারে পরে মনে</a></li>
+            <li><a href="Padma" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">২০. পদ্মা</a></li>
+            <li><a href="February 1952" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">২১. ফেব্রুয়ারি ১৯৫২</a></li>
+            <li><a href="Atharo Bochor Boyosh" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">২২. আঠারো বছর বয়স</a></li>
+            <li><a href="Ami Kingbodontir Kotha Bolchi" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">২৩. আমি কিংবদন্তির কথা বলছি</a></li>
+            <li><a href="Prottabortoner Lojja" class="block p-3 border border-black rounded hover:bg-black hover:text-white transition">২৪. প্রত্যাবর্তনের লজ্জা</a></li>
+        </ul>
+    </main>
 
-        // Render chapters when page loads
-        document.addEventListener('DOMContentLoaded', function() {
-            const container = document.querySelector('.grid');
-            
-            chapters.forEach(chapter => {
-                const chapterElement = createChapterElement(chapter);
-                container.appendChild(chapterElement);
-            });
-            
-            // Add chapter count display
-            const header = document.querySelector('header');
-            const countElement = document.createElement('p');
-            countElement.className = 'text-gray-600 text-center mt-2';
-            countElement.textContent = `মোট অধ্যায়: ${chapters.length}`;
-            header.appendChild(countElement);
-        });
-    </script>
+    <footer class="text-center text-sm text-gray-500 py-6">
+        © 2025 বাংলা অধ্যায় তালিকা
+    </footer>
+
 </body>
 </html>
