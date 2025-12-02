@@ -709,7 +709,20 @@
             // টাইমার শুরু করুন
             startTimer();
         }
+// option shuffle function
+function shuffleOptions(question) {
+    const options = question.options.map((opt, index) => ({ text: opt, index }));
+    for (let i = options.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [options[i], options[j]] = [options[j], options[i]];
+    }
 
+    // shuffled অপশন পুনরায় বসাও
+    question.options = options.map(o => o.text);
+
+    // shuffled position অনুযায়ী answer index আপডেট
+    question.answer = options.findIndex(o => o.index === question.answer);
+}
         // অ্যারে এলোমেলো করুন (ফিশার-ইয়েটস অ্যালগরিদম)
         function shuffleArray(array) {
             const shuffled = [...array];
