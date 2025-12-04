@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আঠারো বছর বয়স- বাংলা</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <i class="fas fa-graduation-cap"></i> আঠারো বছর বয়স 
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </header>
 
+    <div class="container">
+        <!-- Control Bar -->
+        <div class="control-bar">
+            <div class="control-group">
+                <div class="control-item">
+                    <i class="fas fa-clock"></i>
+                    <span id="timer">০০:০০</span>
+                </div>
+                <div class="control-item">
+                    <i class="fas fa-question-circle"></i>
+                    <span id="currentQuestion">০</span>/<span id="totalQuestions">০</span>
+                </div>
+            </div>
+            <div class="control-group">
+                <button class="btn btn-danger" id="resetBtn">
+                    <i class="fas fa-redo"></i> রিসেট
+                </button>
+                <button class="btn btn-success" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> জমা দিন
+                </button>
+            </div>
+        </div>
+
+        <!-- Exam Setup -->
+        <div class="exam-setup" id="examSetup">
+            <h3><i class="fas fa-cog"></i> পরীক্ষার সেটিংস</h3>
+            <div class="form-group">
+    <label for="examTime"><i class="fas fa-clock"></i> পরীক্ষার সময়</label>
+    <input type="number" id="examTime" class="form-control" min="1" max="120" value="৩০">
+    <small class="form-text text-muted">প্রাথমিক সময়: ৩০ মিনিট</small>
+</div>
+            <div class="form-group">
+                <label for="totalQuestionsSelect"><i class="fas fa-list-ol"></i> প্রশ্নের সংখ্যা</label>
+                <select id="totalQuestionsSelect" class="form-control">
+                    <option value="10">১০টি প্রশ্ন</option>
+                    <option value="25">২৫টি প্রশ্ন</option>
+                    <option value="50">৫০টি প্রশ্ন</option>
+                    <option value="75" selected>সব প্রশ্ন</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" id="startExamBtn">
+                <i class="fas fa-play"></i> পরীক্ষা শুরু করুন
+            </button>
+        </div>
+
+        <!-- Question Container -->
+        <div class="question-container" id="questionContainer">
+            <div class="question-header">
+                <div class="question-number">প্রশ্ন <span id="qNumber">১</span></div>
+                <div class="timer-display" id="questionTimer">সময়: <span id="qTime">০০:০০</span></div>
+            </div>
+            <div class="question-text" id="questionText">
+                প্রশ্ন লোড হচ্ছে...
+            </div>
+            <div class="options-container" id="optionsContainer">
+                <!-- অপশনগুলি এখানে যুক্ত হবে -->
+            </div>
+        </div>
+
+        <!-- Result Container -->
+        <div class="result-container" id="resultContainer">
+            <div class="result-header">
+                <h2><i class="fas fa-chart-line"></i> পরীক্ষার ফলাফল</h2>
+                <p>আপনার পারফরম্যান্স</p>
+            </div>
+            
+            <div class="result-stats">
+                <div class="stat-box">
+                    <div class="stat-value" id="resultScore">০</div>
+                    <div class="stat-label">স্কোর</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="correctCount">০</div>
+                    <div class="stat-label">সঠিক উত্তর</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value" id="wrongCount">০</div>
+                    <div class="stat-label">ভুল উত্তর</div>
+                </div>
+            </div>
+            
+            <div class="progress-container">
+                <div class="progress-label">
+                    <span> এই অধ্যায়ে দক্ষতা </span>
+                    <span id="progressPercentage">০%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <div class="answers-review" id="answersReview">
+                <!-- পর্যালোচনা আইটেমগুলি এখানে যুক্ত হবে -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <button class="btn btn-primary" id="retryBtn">
+                    <i class="fas fa-redo"></i> আবার চেষ্টা করুন
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>এমসিকিউ &copy; ২০২৫ | বাংলা আঠারো বছর বয়স প্রশ্ন</p>
+    </footer>
+    <script>
+    </script>
+<script src="script.js"></script>
+</body>
+        </html>
