@@ -50,6 +50,15 @@
     <input type="number" id="examTime" class="form-control" min="1" max="120" value="৩০">
     <small class="form-text text-muted">প্রাথমিক সময়: ৩০ মিনিট</small>
 </div>
+            <div class="form-group">
+                <label for="totalQuestionsSelect"><i class="fas fa-list-ol"></i> প্রশ্নের সংখ্যা</label>
+                <select id="totalQuestionsSelect" class="form-control">
+                    <option value="10">১০টি প্রশ্ন</option>
+                    <option value="25">২৫টি প্রশ্ন</option>
+                    <option value="50">৫০টি প্রশ্ন</option>
+                    <option value="75" selected>সব প্রশ্ন</option>
+                </select>
+            </div>
             <button class="btn btn-primary" id="startExamBtn">
                 <i class="fas fa-play"></i> পরীক্ষা শুরু করুন
             </button>
